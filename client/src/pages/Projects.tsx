@@ -36,7 +36,7 @@ export default function Projects() {
   const [statusFilter, setStatusFilter] = useState("all");
   const [sortBy, setSortBy] = useState("updated");
 
-  const { data: projects = [], isLoading } = useQuery({
+  const { data: projects = [], isLoading } = useQuery<Project[]>({
     queryKey: ["/api/projects", { userId: user?.id }],
     enabled: !!user?.id,
   });
@@ -195,7 +195,7 @@ export default function Projects() {
                         
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center space-x-2 mb-1">
-                            <Link href={`/projects/${project.id}`} data-testid={`project-link-${project.id}`}>
+                            <Link href={`/projects/${project.id}`} data-testid={`project-link-${project.id || 'unknown'}`}>
                               <h3 className="font-semibold text-lg hover:text-primary transition-colors cursor-pointer truncate">
                                 {project.name}
                               </h3>
@@ -214,7 +214,7 @@ export default function Projects() {
                       </div>
 
                       <div className="flex items-center space-x-2">
-                        <Link href={`/projects/${project.id}`} data-testid={`button-open-${project.id}`}>
+                        <Link href={`/projects/${project.id}`} data-testid={`button-open-${project.id || 'unknown'}`}>
                           <Button variant="outline" size="sm">
                             <Edit className="h-4 w-4 mr-1" />
                             Open

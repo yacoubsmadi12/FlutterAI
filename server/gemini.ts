@@ -59,8 +59,24 @@ Focus on creating production-ready, well-structured Flutter code.`;
     const rawJson = response.text;
     
     if (rawJson) {
-      const flutterProject: FlutterProject = JSON.parse(rawJson);
-      return flutterProject;
+      try {
+        // Clean the JSON response by removing any non-JSON content
+        const cleanJson = rawJson.trim();
+        const startIndex = cleanJson.indexOf('{');
+        const endIndex = cleanJson.lastIndexOf('}');
+        
+        if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
+          const jsonStr = cleanJson.substring(startIndex, endIndex + 1);
+          const flutterProject: FlutterProject = JSON.parse(jsonStr);
+          return flutterProject;
+        } else {
+          throw new Error("No valid JSON structure found in response");
+        }
+      } catch (parseError) {
+        console.error("JSON parsing error:", parseError);
+        console.error("Raw response:", rawJson.substring(0, 500) + "...");
+        throw new Error(`Failed to parse Gemini response: ${parseError}`);
+      }
     } else {
       throw new Error("Empty response from Gemini model");
     }
