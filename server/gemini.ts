@@ -51,27 +51,7 @@ Focus on creating production-ready, well-structured Flutter code.`;
       model: "gemini-2.5-pro",
       config: {
         systemInstruction: systemPrompt,
-        responseMimeType: "application/json",
-        responseSchema: {
-          type: "object",
-          properties: {
-            mainDart: { type: "string" },
-            pubspecYaml: { type: "string" },
-            pages: {
-              type: "object",
-              additionalProperties: { type: "string" }
-            },
-            widgets: {
-              type: "object", 
-              additionalProperties: { type: "string" }
-            },
-            assets: {
-              type: "array",
-              items: { type: "string" }
-            }
-          },
-          required: ["mainDart", "pubspecYaml", "pages", "widgets", "assets"]
-        }
+        responseMimeType: "application/json"
       },
       contents: prompt
     });
