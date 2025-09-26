@@ -1,0 +1,141 @@
+"You are a senior full-stack developer.
+Generate a complete Next.js web platform (App Router, TypeScript, TailwindCSS), fully deployable on Vercel, named Appio Flow.
+Appio Flow is an AI-powered platform that helps users generate complete Flutter applications from simple prompts using Gemini.
+
+🌐 Platform Requirements
+Branding
+
+Use the name Appio Flow in the logo placeholder, navigation, landing hero section, About Us, Terms & Privacy.
+
+Tagline: 'From Prompt to App — Effortless with AI.'
+
+Pages
+
+Landing Page (Appio Flow Homepage)
+
+Hero section with logo + tagline.
+
+Features: AI-powered app builder, live preview, ZIP download.
+
+Pricing preview.
+
+Call-to-action button: "Start Building with Appio Flow".
+
+Footer with links: About Us, Contact, Terms, Privacy.
+
+Authentication Pages
+
+Login, Register (Firebase Auth with Google + Email).
+
+Forgot password.
+
+Dashboard
+
+Sidebar: My Projects, New Project, Profile, Billing.
+
+Welcome banner: “Welcome to Appio Flow, [user name]”.
+
+Project list.
+
+Project Workspace
+
+Input box: "Describe your app idea…"
+
+App settings (Name, Theme, Languages).
+
+Button: “Generate with Gemini”.
+
+Tabs: Code, Pages, Assets.
+
+Live Preview of the app (Flutter web).
+
+Project Details Page
+
+Files overview.
+
+Logs of generations.
+
+Button: “Download Flutter ZIP”.
+
+Option: Regenerate Page.
+
+Profile Page
+
+User info (name, email).
+
+Preferences: language (English/Arabic), light/dark theme.
+
+Billing & Subscriptions Page
+
+Plans: Free / Pro / Enterprise.
+
+Credit system ($1 = 100 credits).
+
+Placeholder for PayPal integration (not active yet).
+
+About Us Page
+
+Title: About Appio Flow.
+
+Text: “Appio Flow is part of the Noorixa AI ecosystem, built to simplify app creation with the power of AI.”
+
+Mission & Vision.
+
+Contact Us Page
+
+Contact form (Name, Email, Message).
+
+Support email: support@appioflow.com
+.
+
+Social links placeholders.
+
+Meet Our Team Page
+
+Title: Meet the Appio Flow Team.
+
+Members list with photos, names, roles, bios.
+
+Terms & Conditions Page
+
+Title: Appio Flow Terms of Service.
+
+Placeholder content for rules/disclaimers.
+
+Privacy Policy Page
+
+Title: Appio Flow Privacy Policy.
+
+Placeholder for data protection & GDPR text.
+
+Admin Panel (optional)
+
+Manage users, projects, subscriptions.
+
+Tech Stack
+
+Frontend: Next.js (App Router, TypeScript) + TailwindCSS.
+
+Backend: Firebase Functions (Gemini API integration, credits logic).
+
+Database: Firestore (users, projects, prompts, subscriptions).
+
+Storage: Firebase Storage (assets).
+
+Auth: Firebase Authentication.
+
+Hosting: Vercel (frontend) + Firebase (backend).
+
+Deliverables
+
+Full codebase branded as Appio Flow.
+
+.env.example file for Firebase + Gemini API keys.
+
+Multi-language support (English + Arabic toggle).
+
+Clean, modular code with comments.
+
+Ready for direct deployment to Vercel.
+
+⚡ Generate this as a production-quality platform: Appio Flow – From Prompt to App."
